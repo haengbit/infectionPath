@@ -2,8 +2,6 @@
 //  ifs_element.c
 //  InfestPath
 //
-//  Created by Juyeop Kim on 2020/10/20.
-//
 
 #include <stdio.h>
 #include <string.h>
@@ -97,3 +95,52 @@ char countryName[N_PLACE+1][MAX_PLACENAME] =
     "CapeTown",
     "Unrecognized"
 };
+
+typedef struct ifs_ele {
+	int index;//number
+	int age;//age
+	int time;//time
+	place_t place[N_HISTORY];//place[N_HISTORY]
+} ifs_ele_t;
+
+
+
+void* ifctele_genElement(int index, int age, unsigned int detected_time, int history_place[N_HISTORY])
+{
+	ifs_ele_t* ptr;
+	
+	ptr = malloc();
+	ptr->index = index;
+	//..
+		
+	return ptr;
+}
+
+int ifctele_getAge(void* obj)
+{
+	ifs_ele_t* ptr = (ifs_ele_t*)obj;
+	
+	return ptr->age;
+}
+
+int ifctele_getHistPlaceIndex(void* obj, int index);
+unsigned int ifctele_getinfestedTime(void* obj);
+
+
+//char* ifctele_getPlaceName(int placeIndex);
+
+
+void ifctele_printElement(void* obj)
+{
+	ifs_ele_t* ptr = (ifs_ele_t*)obj;
+	
+	printf("Age : %i\n", ptr->age);
+}
+
+
+
+
+char* ifctele_getPlaceName(int placeIndex)
+{
+	return countryName[placeIndex];
+}

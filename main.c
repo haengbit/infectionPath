@@ -2,8 +2,6 @@
 //  main.c
 //  infestPath
 //
-//  Created by Juyeop Kim on 2022/10/20.
-//
 
 #include <stdio.h>
 #include <string.h>
@@ -17,7 +15,6 @@
 #define MENU_EXIT           0
 
 #define TIME_HIDE           2
-
 
 int trackInfester(int patient_no, int *detected_time, int *place);
 int main(int argc, const char * argv[]) {
@@ -36,17 +33,39 @@ int main(int argc, const char * argv[]) {
         return -1;
     }
     
-    fp = fopen(argv[1],"r");
+    fp = fopen(argv[1], "r");
     if (fp == NULL)
     {
         printf("[ERROR] Failed to open database file!! (%s)\n", argv[1]);
         return -1;
     }
     
+    #if 
     //1-2. loading each patient informations
+    while ( 3 == fscanf("3가지 읽기", 변수들))
+    {
+    	for 
+			fscanf(5개 읽기) ;
+			
+		ifct_element = ifctele_genElement(index, age, ...);
+		
+		ifctdb_addTail(ifct_element);
+		
+	}
+	#endif
     
     //1-3. FILE pointer close
     fclose(fp);
+    
+    {
+    	int place1, place2;
+    	
+		place1 = 3;
+    	place2 = 15;
+    	
+    	printf("The first place is %s\n", ifctele_getPlaceName(place1)) ;
+    	printf("The second place is %s\n", ifctele_getPlaceName(place2)) ;
+	}
     
     do {
         printf("\n=============== INFECTION PATH MANAGEMENT PROGRAM (No. of patients : %i) =============\n", ifctdb_len());
