@@ -40,7 +40,7 @@ int main(int argc, const char * argv[]) {
         return -1;
     }
     
-    #if 
+    
     //1-2. loading each patient informations
     while ( 3 == fscanf("3가지 읽기", 변수들))
     {
@@ -87,7 +87,7 @@ int main(int argc, const char * argv[]) {
                 break;
                 
             case MENU_PATIENT:
-                
+                printf("patient number : %i, patient age : %i, detected time : %i ", index, age, detected_time)
                 break;
                 
             case MENU_PLACE:

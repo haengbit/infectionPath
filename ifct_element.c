@@ -111,7 +111,8 @@ void* ifctele_genElement(int index, int age, unsigned int detected_time, int his
 	
 	ptr = malloc();
 	ptr->index = index;
-	//..
+	ptr->age = age;
+	ptr->detected_time = detected_time;
 		
 	return ptr;
 }
